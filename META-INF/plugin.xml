@@ -1,0 +1,46 @@
+<idea-plugin version="2">
+	<id>pl.jvsystem.idea.svnpath</id>
+	<name>Copy SVN URL Path</name>
+	<version>1.0</version>
+	<vendor email="pnowy@o2.pl" url="http://www.jvsystem.pl">JV SYSTEM</vendor>
+	<depends>Subversion</depends>
+
+	<description><![CDATA[
+		<h2>SVN copy path additional context menu action</h2>
+    ]]></description>
+
+	<change-notes><![CDATA[
+      <h2>Version 1.0 has been released!</h2>
+    ]]>
+	</change-notes>
+
+	<!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+	<idea-version since-build="133"/>
+
+	<!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+		   on how to target different products -->
+	<!-- uncomment to enable plugin in all products
+	  <depends>com.intellij.modules.lang</depends>
+	  -->
+
+	<extensions defaultExtensionNs="com.intellij">
+		<!-- Add your extensions here -->
+		<!--<vcs name="svn" vcsClass="org.jetbrains.idea.svn.SvnVcs"/>-->
+	</extensions>
+
+	<application-components>
+		<!-- Add your application components here -->
+	</application-components>
+
+	<project-components>
+		<!-- Add your project components here -->
+	</project-components>
+
+	<actions>
+		<!-- Copy URL Action -->
+		<action class="pl.jvsystem.svnpath.acitons.CopySvnPathAction" id="CopySvnPathAction" text="Copy SVN URL">
+			<add-to-group group-id="SubversionFilePopupGroup" anchor="last" />
+		</action>
+	</actions>
+
+</idea-plugin>
